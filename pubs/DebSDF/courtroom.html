@@ -50,6 +50,7 @@
     <script src="./static/js/app.js"></script>
     <link rel="stylesheet" href="./static/css/dics.min.css"/>
     <script src="./static/js/dics.min.js"></script>
+    <script src="./static/js/video_comparison.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', domReady);
@@ -314,54 +315,68 @@
       </div>
     </section>
 
-    <section class="section" id="geo">
-      <!-- Geometry. -->
 
-      <div class="container has-text-centered">
-        <h2 class="title">Tanks and Temples Advanced Results(Courtroom)</h2>
-        <div class="container">
-          <div id="geo-carousel" class="carousel results-carousel">
 
-            <div class="item item-0">
-              <div class="col-md-8 col-md-offset-2">
-                  <h3>
-                      Ours' Grid Compared with MonoSDF's Grid
-                  </h3>
-                  <div class="b-dics" >
-                      <img src="./static/videos/tnt_courtroom/compare2/mono_grid_tnt1.gif" alt="MonoSDF(Grid)" />
-                      <img src="./static/videos/tnt_courtroom/compare2/ours_grid_tnt1.gif" alt="Ours(Grid)" />
-                  </div>
-              </div>
-            </div>
-            <div class="item item-1">
-              <div class="col-md-8 col-md-offset-2">
-                  <h3>
-                      Ours' MLP Compared with NeuRIS
-                  </h3>
-                  <div class="b-dics" >
-                      <img src="./static/videos/tnt_courtroom/compare3/neuris_tnt1.gif" alt="NeuRIS" />
-                      <img src="./static/videos/tnt_courtroom/compare3/ours_mlp_tnt1.gif" alt="Ours(MLP)" />
-                  </div>
-              </div>
-            </div>
-            <div class="item item-2">
-              <div class="col-md-8 col-md-offset-2">
-                  <h3>
-                      Ours' MLP Compared with MonoSDF's MLP
-                  </h3>
-                  <div class="b-dics" >
-                      <img src="./static/videos/tnt_courtroom/compare1/mono_mlp_tnt1.gif" alt="MonoSDF(MLP)" />
-                      <img src="./static/videos/tnt_courtroom/compare1/ours_mlp_tnt1.gif" alt="Ours(MLP)" />
-                  </div>
-              </div>
-            </div>
 
-          </div>
+    <section class="section" id="compare">
+
+      <div class="columns is-centered has-text-centered" id="video">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2">TNT Advanced Courtroom Comparison</h2>
+          <h3 id="compareText">
+            MonoSDF Grid(Left) 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Ours Grid(Right)
+          </h3>
+          <video class="video" width=100% id="xyalias" loop playsinline autoplay muted src="./static/videos/tnt_courtroom/compare1.mp4" onplay="resizeAndPlay(this)"></video>
+          <canvas height=0 class="videoMerge" id="xyaliasMerge"></canvas>
+          <br>
+          <br>
+          <button id="MonoSDFGrid">MonoSDF Grid</button>
+          <button id="NeuRIS">NeuRIS</button>
+          <button id="MonoSDFMLP">MonoSDF MLP</button>
         </div>
       </div>
- 
 
+      <script>
+      const video = document.getElementById('xyalias');
+      const buttonMonoSDFGrid = document.getElementById('MonoSDFGrid');
+      const buttonNeuRIS = document.getElementById('NeuRIS');
+      const buttonMonoSDFMLP = document.getElementById('MonoSDFMLP');
+      const text = document.getElementById('compareText');
+
+      buttonMonoSDFGrid.addEventListener('click', () => {
+        video.src = './static/videos/tnt_courtroom/compare1.mp4'; 
+        const newText = ' MonoSDF Grid(Left)\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            Ours Grid(Right)\
+          ';
+        text.innerHTML = newText;
+      });
+      buttonNeuRIS.addEventListener('click', () => {
+        video.src = './static/videos/tnt_courtroom/compare2.mp4'; 
+        const newText = ' NeuRIS(Left)\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            Ours(Right)\
+          ';
+        text.innerHTML = newText;
+      });
+      buttonMonoSDFMLP.addEventListener('click', () => {
+        video.src = './static/videos/tnt_courtroom/compare3.mp4';
+        const newText = ' MonoSDF MLP(Left)\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            Ours MLP(Right)\
+          ';
+        text.innerHTML = newText;
+      });
+      </script>
     </section>
+
+
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
@@ -432,7 +447,6 @@
     </script>
   </body>
 </html>
-
 
 
 

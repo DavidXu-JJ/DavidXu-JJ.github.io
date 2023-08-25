@@ -50,6 +50,7 @@
     <script src="./static/js/app.js"></script>
     <link rel="stylesheet" href="./static/css/dics.min.css"/>
     <script src="./static/js/dics.min.js"></script>
+    <script src="./static/js/video_comparison.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', domReady);
@@ -314,53 +315,68 @@
       </div>
     </section>
 
-    <section class="section" id="geo">
-      <!-- Geometry. -->
 
-      <div class="container has-text-centered">
-        <h2 class="title">Kitchen Results</h2>
-        <div class="container">
-          <div id="geo-carousel" class="carousel results-carousel">
 
-            <div class="item item-0">
-              <div class="col-md-8 col-md-offset-2">
-                  <h3>
-                      Compared with MonoSDF
-                  </h3>
-                  <div class="b-dics" >
-                      <img src="./static/videos/kitchen/compare1/mono_rgbd5.gif" alt="MonoSDF" />
-                      <img src="./static/videos/kitchen/compare1/ours_rgbd5.gif" alt="Ours" />
-                  </div>
-              </div>
-            </div>
-            <div class="item item-1">
-              <div class="col-md-8 col-md-offset-2">
-                  <h3>
-                      Compared with NeuRIS
-                  </h3>
-                  <div class="b-dics" >
-                      <img src="./static/videos/kitchen/compare2/neuris_rgbd5.gif" alt="NeuRIS" />
-                      <img src="./static/videos/kitchen/compare2/ours_rgbd5.gif" alt="Ours" />
-                  </div>
-              </div>
-            </div>
 
-            <div class="item item-2">
-              <div class="col-md-8 col-md-offset-2">
-                  <h3>
-                      Compared with GroundTruth
-                  </h3>
-                  <div class="b-dics" >
-                      <img src="./static/videos/kitchen/compare3/gt_rgbd5.gif" alt="GroundTruth" />
-                      <img src="./static/videos/kitchen/compare3/ours_rgbd5.gif" alt="Ours" />
-                  </div>
-              </div>
-            </div>
-          </div>
+    <section class="section" id="compare">
+
+      <div class="columns is-centered has-text-centered" id="video">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2">Kitchen Comparison</h2>
+          <h3 id="compareText">
+            MonoSDF(Left) 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Ours(Right)
+          </h3>
+          <video class="video" width=100% id="xyalias" loop playsinline autoplay muted src="./static/videos/kitchen/compare1.mp4" onplay="resizeAndPlay(this)"></video>
+          <canvas height=0 class="videoMerge" id="xyaliasMerge"></canvas>
+          <br>
+          <br>
+          <button id="MonoSDF">MonoSDF</button>
+          <button id="NeuRIS">NeuRIS</button>
+          <button id="GT">Ground Truth</button>
         </div>
- 
+      </div>
 
+      <script>
+      const video = document.getElementById('xyalias');
+      const buttonMonoSDF = document.getElementById('MonoSDF');
+      const buttonNeuRIS = document.getElementById('NeuRIS');
+      const buttonGT = document.getElementById('GT');
+      const text = document.getElementById('compareText');
+
+      buttonMonoSDF.addEventListener('click', () => {
+        video.src = './static/videos/kitchen/compare1.mp4'; 
+        const newText = ' MonoSDF(Left)\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            Ours(Right)\
+          ';
+        text.innerHTML = newText;
+      });
+      buttonNeuRIS.addEventListener('click', () => {
+        video.src = './static/videos/kitchen/compare2.mp4'; 
+        const newText = ' NeuRIS(Left)\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            Ours(Right)\
+          ';
+        text.innerHTML = newText;
+      });
+      buttonGT.addEventListener('click', () => {
+        video.src = './static/videos/kitchen/compare3.mp4';
+        const newText = ' Ground Truth(Left)\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+            Ours(Right)\
+          ';
+        text.innerHTML = newText;
+      });
+      </script>
     </section>
+
+
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
@@ -431,7 +447,6 @@
     </script>
   </body>
 </html>
-
 
 
 
