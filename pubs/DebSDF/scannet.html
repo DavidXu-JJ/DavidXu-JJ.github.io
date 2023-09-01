@@ -82,60 +82,48 @@
     <script>
       $(document).ready(function () {
         const citations = [
-          // {
-          //   name: "citation_title",
-          //   content:
-          //     "Seal-3D: Interactive Pixel-Level Editing for Neural Radiance Fields",
-          // },
-          // {
-          //   name: "citation_author",
-          //   content: "Wang, Xiangyu",
-          // },
-          // {
-          //   name: "citation_author",
-          //   content: "Zhu, Jingsen",
-          // },
-          // {
-          //   name: "citation_author",
-          //   content: "Ye, Qi",
-          // },
-          // {
-          //   name: "citation_author",
-          //   content: "Huo, Yuchi",
-          // },
-          // {
-          //   name: "citation_author",
-          //   content: "Ran, Yunlong",
-          // },
-          // {
-          //   name: "citation_author",
-          //   content: "Zhong, Zhihua",
-          // },
-          // {
-          //   name: "citation_author",
-          //   content: "Chen, Jiming",
-          // },
-          // {
-          //   name: "citation_date",
-          //   content: "2023/07/27",
-          // },
-          // {
-          //   name: "citation_online_date",
-          //   content: "2023/07/27",
-          // },
-          // {
-          //   name: "citation_pdf_url",
-          //   content: "https://arxiv.org/pdf/2307.15131",
-          // },
-          // {
-          //   name: "citation_arxiv_id",
-          //   content: "2307.15131",
-          // },
-          // {
-          //   name: "citation_abstract",
-          //   content:
-          //     " With the popularity of implicit neural representations, or neural radiance\nfields (NeRF), there is a pressing need for editing methods to interact with\nthe implicit 3D models for tasks like post-processing reconstructed scenes and\n3D content creation. While previous works have explored NeRF editing from\nvarious perspectives, they are restricted in editing flexibility, quality, and\nspeed, failing to offer direct editing response and instant preview. The key\nchallenge is to conceive a locally editable neural representation that can\ndirectly reflect the editing instructions and update instantly. To bridge the\ngap, we propose a new interactive editing method and system for implicit\nrepresentations, called Seal-3D, which allows users to edit NeRF models in a\npixel-level and free manner with a wide range of NeRF-like backbone and preview\nthe editing effects instantly. To achieve the effects, the challenges are\naddressed by our proposed proxy function mapping the editing instructions to\nthe original space of NeRF models and a teacher-student training strategy with\nlocal pretraining and global finetuning. A NeRF editing system is built to\nshowcase various editing types. Our system can achieve compelling editing\neffects with an interactive speed of about 1 second.\n",
-          // },
+          {
+            name: "citation_title",
+            content:
+              "DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction",
+          },
+          {
+            name: "citation_author",
+            content: "Xiao, Yuting",
+          },
+          {
+            name: "citation_author",
+            content: "Xu, Jingwei",
+          },
+          {
+            name: "citation_author",
+            content: "Yu, Zehao",
+          },
+          {
+            name: "citation_author",
+            content: "Gao, Shenghua",
+          },
+          {
+            name: "citation_date",
+            content: "2023/08/29",
+          },
+          {
+            name: "citation_online_date",
+            content: "2023/08/29",
+          },
+          {
+            name: "citation_pdf_url",
+            content: "https://arxiv.org/abs/2308.15536",
+          },
+          {
+            name: "citation_arxiv_id",
+            content: "2308.15536",
+          },
+          {
+            name: "citation_abstract",
+            content:
+              "In recent years, the neural implicit surface has emerged as a powerful representation for multi-view surface reconstruction due to its simplicity and state-of-the-art performance. However, reconstructing smooth and detailed surfaces in indoor scenes from multi-view images presents unique challenges. Indoor scenes typically contain large texture-less regions, making the photometric loss unreliable for optimizing the implicit surface. Previous work utilizes monocular geometry priors to improve the reconstruction in indoor scenes. However, monocular priors often contain substantial errors in thin structure regions due to domain gaps and the inherent inconsistencies when derived independently from different views. This paper presents DebSDF to address these challenges, focusing on the utilization of uncertainty in monocular priors and the bias in SDF-based volume rendering. We propose an uncertainty modeling technique that associates larger uncertainties with larger errors in the monocular priors. High-uncertainty priors are then excluded from optimization to prevent bias. This uncertainty measure also informs an importance-guided ray sampling and adaptive smoothness regularization, enhancing the learning of fine structures. We further introduce a bias-aware signed distance function to density transformation that takes into account the curvature and the angle between the view direction and the SDF normals to reconstruct fine details better. Our approach has been validated through extensive experiments on several challenging datasets, demonstrating improved qualitative and quantitative results in reconstructing thin structures in indoor scenes, thereby outperforming previous work. The source code and more visualizations can be found in https://davidxu-jj.github.io/pubs/DebSDF/.",
+          },
         ];
         createCitationMeta(citations);
       });
@@ -246,10 +234,9 @@
                       <span>Paper(Coming soon)</span>
                     </a>
                   </span>
-                  <!-- TODO -->
                   <span class="link-block">
                     <a
-                      href=""
+                      href="https://arxiv.org/abs/2308.15536"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -393,15 +380,15 @@
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <!-- TODO -->
-<!--         <pre><code>@misc{wang2023seal3d, -->
-<!--       title={Seal-3D: Interactive Pixel-Level Editing for Neural Radiance Fields},  -->
-<!--       author={Xiangyu Wang and Jingsen Zhu and Qi Ye and Yuchi Huo and Yunlong Ran and Zhihua Zhong and Jiming Chen}, -->
-<!--       year={2023}, -->
-<!--       eprint={2307.15131}, -->
-<!--       archivePrefix={arXiv}, -->
-<!--       primaryClass={cs.CV} -->
-<!-- } -->
-<!-- </code></pre> -->
+        <pre><code>@misc{xiao2023debsdf,
+      title={DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction}, 
+      author={Yuting Xiao and Jingwei Xu and Zehao Yu and Shenghua Gao},
+      year={2023},
+      eprint={2308.15536},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+</code></pre>
       </div>
     </section>
 
@@ -409,7 +396,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <!-- TODO -->
-          <a class="icon-link" href="">
+          <a class="icon-link" href="https://arxiv.org/pdf/2308.15536.pdf">
             <i class="fas fa-file-pdf"></i>
           </a>
             <!-- TODO -->
