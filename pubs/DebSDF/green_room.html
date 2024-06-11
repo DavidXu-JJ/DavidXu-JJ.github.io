@@ -129,6 +129,24 @@
       });
     </script>
   </head>
+  <style>
+    button {
+      padding: 0.5em 0.75em;
+      margin: 0.4em 0.4em;
+      /* min-width: 18ch; */
+      /* max-width: 18ch; */
+      text-align: left;
+      background-color: #ddd;
+      color: #333;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    
+      @media screen and (-ms-high-contrast: active) {
+        border: 2px solid currentcolor;
+      }
+    }
+  </style>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -182,9 +200,12 @@
               <h1 class="title is-1 publication-title" style="font-size: 36px">
                 DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction
               </h1>
+              <h2 class="title is-2 publication-title" style="font-size: 24px">
+                (TPAMI 2024)
+              </h2>
               <div class="is-size-5 publication-authors">
                 <span class="author-block" style="font-size: 22px">
-                  <a href="https://svip-lab.github.io/team/xiaoyt.html">Yuting Xiao</a
+                  <a href="https://scholar.google.com/citations?user=AioOVwEAAAAJ&hl=en">Yuting Xiao</a
                   ><sup>1*</sup>,
                 </span>
                 <span class="author-block" style="font-size: 22px">
@@ -196,7 +217,7 @@
                   ><sup>2</sup>,
                 </span>
                 <span class="author-block" style="font-size: 22px">
-                  <a href="https://svip-lab.github.io/team">Shenghua Gao</a
+                  <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Shenghua Gao</a
                   ><sup>1†</sup>,
                 </span>
               </div>
@@ -216,7 +237,7 @@
                 <div class="link-block">
                   <!-- PDF Link. -->
                   <!-- TODO -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a
                       href=""
                       class="external-link button is-normal is-rounded is-dark"
@@ -226,7 +247,7 @@
                       </span>
                       <span>Paper(Coming soon)</span>
                     </a>
-                  </span>
+                  </span> -->
                   <span class="link-block">
                     <a
                       href="https://arxiv.org/abs/2308.15536"
@@ -267,7 +288,7 @@
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
-                      <span>Code(Coming soon)</span>
+                      <span>Code</span>
                     </a>
                   </span>
                   <!-- Dataset Link. -->
@@ -295,67 +316,93 @@
       </div>
     </section>
 
+    <div class="columns is-centered has-text-centered" id="video">
+      <div class="column is-four-fifths">
+      <button id="Scene6" onclick="navigateToPath('Scene6')">Back to Main Page</button>
+        <h3> Select which methods to compare.</h3>
+        <button id="MonoSDF">MonoSDF</button>
+        <button id="NeuRIS">NeuRIS</button>
+        <button id="GT">Ground Truth</button>
+        <h4 >(Please refresh if you don't see the video. Switch video will need some time to process.)</h4>
+        <h3 id="compareText">
+          MonoSDF&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;Ours
+        </h3>
+        <video class="video" width=100% id="xyalias" loop playsinline autoplay muted src="./static/videos/green_room/compare1.mp4" onplay="resizeAndPlay(this)"></video>
+        <canvas height=0 class="videoMerge" id="xyaliasMerge"></canvas>
 
+        <br>
+        <!-- <br> -->
+        <strong style="font-size: 20px;">Click here to switch the scene: &nbsp;&nbsp; </strong>
+        <button id="Scene1" onclick="navigateToPath('Scene1')">Scannet</button>
+        <button id="Scene2" onclick="navigateToPath('Scene2')">Breakfast Room</button>
+        <button id="Scene3" onclick="navigateToPath('Scene3')">Green room</button>
+        <button id="Scene4" onclick="navigateToPath('Scene4')">Kitchen</button>
+        <button id="Scene5" onclick="navigateToPath('Scene5')">TNT Advanced Courtroom</button>
+        <br>
+        <!-- <br>
+        <br>
+        <video class="video" width=100% id="original" loop playsinline autoplay muted src="./static/videos/Experiment/scene1/data_vs_ours.mp4" onplay="resizeAndPlay(this)"></video> -->
 
-
-    <section class="section" id="compare">
-
-      <div class="columns is-centered has-text-centered" id="video">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2">Green Room Comparison</h2>
-          (You may need to refresh your browser if you can't see the video.)
-          <h3 id="compareText">
-            MonoSDF(Left) 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Ours(Right)
-          </h3>
-          <video class="video" width=100% id="xyalias" loop playsinline autoplay muted src="./static/videos/green_room/compare1.mp4" onplay="resizeAndPlay(this)"></video>
-          <canvas height=0 class="videoMerge" id="xyaliasMerge"></canvas>
-          <br>
-          <br>
-          <button id="MonoSDF">MonoSDF</button>
-          <button id="NeuRIS">NeuRIS</button>
-          <button id="GT">Ground Truth</button>
-        </div>
       </div>
+    </div>
 
-      <script>
+    <script>
+      let sceneNumber = 1;
+      let lastFile = 'compare1.mp4';
+      let lastText = 'MonoSDF';
       const video = document.getElementById('xyalias');
-      const buttonMonoSDF = document.getElementById('MonoSDF');
-      const buttonNeuRIS = document.getElementById('NeuRIS');
-      const buttonGT = document.getElementById('GT');
-      const text = document.getElementById('compareText');
 
-      buttonMonoSDF.addEventListener('click', () => {
-        video.src = './static/videos/green_room/compare1.mp4'; 
-        const newText = ' MonoSDF(Left)\
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
-            Ours(Right)\
-          ';
-        text.innerHTML = newText;
+      const text = document.getElementById('compareText');
+      const pathText = document.getElementById('pathText');
+
+      const updateVideoSource = (source, name) => {
+        video.src = `./static/videos/green_room/${source}`;
+        text.innerHTML = `${name}&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;Ours`;
+        lastFile = source;
+        lastText = name;
+      };
+
+
+      document.getElementById('MonoSDF').addEventListener('click', () => {
+        updateVideoSource('compare1.mp4', 'MonoSDF');
       });
-      buttonNeuRIS.addEventListener('click', () => {
-        video.src = './static/videos/green_room/compare2.mp4'; 
-        const newText = ' NeuRIS(Left)\
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
-            Ours(Right)\
-          ';
-        text.innerHTML = newText;
+
+      document.getElementById('NeuRIS').addEventListener('click', () => {
+        updateVideoSource('compare2.mp4', 'NeuRIS');
       });
-      buttonGT.addEventListener('click', () => {
-        video.src = './static/videos/green_room/compare3.mp4';
-        const newText = ' Ground Truth(Left)\
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
-            Ours(Right)\
-          ';
-        text.innerHTML = newText;
+
+      document.getElementById('GT').addEventListener('click', () => {
+        updateVideoSource('compare3.mp4', 'Ground Truth');
       });
+      function navigateToPath(scene) {
+            let path = '';
+            switch(scene) {
+                case 'Scene1':
+                    path = './scannet.html';
+                    break;
+                case 'Scene2':
+                    path = './breakfast_room.html';
+                    break;
+                case 'Scene3':
+                    path = './green_room.html';
+                    break;
+                case 'Scene4':
+                    path = './kitchen.html';
+                    break;
+                case 'Scene5':
+                    path = './courtroom.html';
+                    break;
+                case 'Scene6':
+                    path = './index.html';
+                    break;
+                default:
+                    console.error('Invalid scene');
+                    return;
+            }
+            window.location.href = path;
+        }
+
       </script>
-    </section>
 
 
 
