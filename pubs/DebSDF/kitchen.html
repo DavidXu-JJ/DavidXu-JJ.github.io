@@ -319,10 +319,6 @@
     <div class="columns is-centered has-text-centered" id="video">
       <div class="column is-four-fifths">
       <button id="Scene6" onclick="navigateToPath('Scene6')">Back to Main Page</button>
-        <h3> Select which methods to compare.</h3>
-        <button id="MonoSDF">MonoSDF</button>
-        <button id="NeuRIS">NeuRIS</button>
-        <button id="GT">Ground Truth</button>
         <h4 >(Please refresh if you don't see the video. Switch video will need some time to process.)</h4>
         <h3 id="compareText">
           MonoSDF&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;Ours
@@ -331,14 +327,19 @@
         <canvas height=0 class="videoMerge" id="xyaliasMerge"></canvas>
 
         <br>
-        <!-- <br> -->
-        <strong style="font-size: 20px;">Click here to switch the scene: &nbsp;&nbsp; </strong>
+        <strong> Select which methods to compare.</strong>
+        <br>
+        <button id="MonoSDF">MonoSDF</button>
+        <button id="NeuRIS">NeuRIS</button>
+        <button id="GT">Ground Truth</button>
+        <br>
+        <strong>Click here to switch the scene</strong>
+        <br>
         <button id="Scene1" onclick="navigateToPath('Scene1')">Scannet</button>
         <button id="Scene2" onclick="navigateToPath('Scene2')">Breakfast Room</button>
         <button id="Scene3" onclick="navigateToPath('Scene3')">Green room</button>
         <button id="Scene4" onclick="navigateToPath('Scene4')">Kitchen</button>
         <button id="Scene5" onclick="navigateToPath('Scene5')">TNT Advanced Courtroom</button>
-        <br>
         <!-- <br>
         <br>
         <video class="video" width=100% id="original" loop playsinline autoplay muted src="./static/videos/Experiment/scene1/data_vs_ours.mp4" onplay="resizeAndPlay(this)"></video> -->
@@ -441,16 +442,11 @@
         </div>
         <div class="columns is-centered">
           <div class="column is-8">
-            <div class="content">
-              <p>
-                Thanks to
-                <!-- TODO -->
-                <a href="https://github.com/nerfies/nerfies.github.io"
-                  >Nerfies</a
-                >
-                for their excellent website templates.
-              </p>
-            </div>
+            <div class="is-size-5">
+              Thanks to
+                Seal3D
+              for their excellent website templates.
+          </div>
           </div>
         </div>
       </div>
