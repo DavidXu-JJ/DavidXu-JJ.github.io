@@ -4,45 +4,163 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>David Jingwei Xu's Homepages</title>
+		<title>Jingwei (David) Xu's Homepage</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Homepage of Jingwei (David) Xu, PhD student at Monash University working on 3D Vision, Computer Graphics and AI." />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Jingwei (David) Xu's Homepage" />
+		<meta property="og:description" content="Homepage of Jingwei (David) Xu, PhD student at Monash University working on 3D Vision, Computer Graphics and AI." />
+		<meta property="og:url" content="https://davidxu-jj.github.io/" />
+		<meta property="og:image" content="https://davidxu-jj.github.io/images/avatar.jpg" />
+		<link rel="canonical" href="https://davidxu-jj.github.io/" />
+		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap" />
+		<style>
+		body {margin: 0;}
+
+		ul.topnav {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #1c2733;
+		}
+
+		ul.topnav li {float: left;}
+
+		ul.topnav li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  border-bottom: 0;
+		}
+
+		ul.topnav li a:hover:not(.active) {background-color: #10161c;}
+
+		ul.topnav li a.active {background-color: #49bf9d;}
+
+		ul.topnav li.right {float: right;}
+
+		@media screen and (max-width: 600px) {
+		  ul.topnav li.right, 
+		  ul.topnav li {float: none;}
+		}
+
+		.thumb-img, .misc-img {
+		  height: auto;
+		  max-height: 300px;
+		  object-fit: contain;
+		}
+
+		h2.section-title {font-size: 2em;}
+
+		h3.work-date {font-size: 1.5em;}
+
+		.work-item h4 {
+		  font-size: 1em;
+		  margin: 0 0 0.5em 0;
+		}
+
+		p.note {
+		  color: #787878;
+		  font-size: 1.1em;
+		  line-height: 1.5em;
+		  margin: 0 0 1em 0;
+		}
+
+		#header .image.avatar {
+		  width: 9em;
+		  padding: 0.35em;
+		  border: 2px solid rgba(73, 191, 157, 0.85);
+		  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0.75em 2em rgba(0, 0, 0, 0.45);
+		  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		#header .image.avatar:hover {
+		  border-color: #49bf9d;
+		  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 1.5em rgba(73, 191, 157, 0.45);
+		}
+
+		#header .image.avatar img {
+		  aspect-ratio: 1;
+		  object-fit: cover;
+		}
+		#header {
+		  background-color: #10161c;
+		  background-image:
+		    radial-gradient(circle at 78% 20%, rgba(73, 191, 157, 0.22), transparent 55%),
+		    linear-gradient(165deg, #1c2733 0%, #121920 55%, #0b0f14 100%);
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+
+		@media screen and (max-width: 980px) {
+		  #header {
+		    background-image:
+		      radial-gradient(circle at 50% 35%, rgba(73, 191, 157, 0.22), transparent 60%),
+		      linear-gradient(180deg, #1c2733 0%, #10161c 100%);
+		  }
+
+		  #footer {
+		    background-color: #10161c;
+		    background-image: linear-gradient(180deg, #10161c 0%, #0b0f14 100%);
+		  }
+		}
+		.work-item p strong {
+		  color: #555555;
+		  font-weight: 600;
+		}
+		#bio header.major {margin-bottom: 1.5em;}
+
+		#bio header.major h2 {font-size: 1.6em;}
+
+		#bio p.lead {
+		  border-left: 3px solid #49bf9d;
+		  color: #787878;
+		  font-size: 1.1em;
+		  margin: 0 0 1.75em 0;
+		  padding-left: 1em;
+		}
+
+		#bio p.bio-text {margin: 0 0 2.5em 0;}
+
+		#bio .contact {
+		  border-top: solid 1px #efefef;
+		  font-size: 0.9em;
+		  padding-top: 1.25em;
+		}
+
+		#bio .contact p {margin: 0 0 0.25em 0;}
+
+		#bio .contact ul {
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		#bio .contact li {
+		  display: inline-block;
+		  padding: 0 0.4em 0 0;
+		}
+
+		#bio .contact li:not(:last-child):after {
+		  content: "\00b7";
+		  margin: 0 0.2em 0 0.6em;
+		}
+		.image.fit video {
+		  border-radius: 0.35em;
+		  display: block;
+		  width: 100%;
+		}
+		</style>
 	</head>
-<style>
-body {margin: 0;}
-
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-ul.topnav li a.active {background-color: #04AA6D;}
-
-ul.topnav li.right {float: right;}
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
-</style>
 	<body class="is-preload">
 <ul class="topnav">
   <li class="right"><a href="./artworks/index.html">Artworks</a></li>
@@ -50,15 +168,15 @@ ul.topnav li.right {float: right;}
   <!-- <li class="right"><a href="#about">About</a></li> -->
   <!-- <li class="right"><a href="#contact">Contact</a></li> -->
   <!-- <li class="right"><a href="#news">News</a></li> -->
-  <li class="right"><a class="active" href="">Home</a></li>
+  <li class="right"><a class="active" href="./">Home</a></li>
 </ul>
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="Portrait of Jingwei Xu" /></span>
 					<h1><strong>I'm Jingwei Xu</strong><br/> 
-          MPhil student at ShanghaiTech<br />
+          PhD student at Monash University<br />
 					</h1>
 				</div>
 			</header>
@@ -68,50 +186,111 @@ ul.topnav li.right {float: right;}
 
 				<!-- One -->
 					<section id="bio">
+						<p class="bio-text">
+            I'm Jingwei Xu (you can also call me David), a first-year PhD student at Monash University, advised by <a href="https://scholar.google.com/citations?user=N6czCoUAAAAJ&hl=en">Prof. Jianfei Cai</a> and <a href="https://scholar.google.com/citations?user=05U81tIAAAAJ&hl=en">Prof. Tien-Tsin Wong</a>.
+            Before that, I received my MPhil degree from ShanghaiTech University, where I was supervised by <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Prof. Shenghua Gao</a> and <a href="https://scholar.google.com/citations?user=dK02t3MAAAAJ&hl=en">Prof. Xiaopei Liu</a>.
+            During my MPhil, I also visited UC San Diego, where I was fortunate to have the opportunity to work with <a href="https://scholar.google.com/citations?user=fuR1FBwAAAAJ&hl=en">Prof. Anpei Chen</a>.
+						</p>
 						<header class="major">
-							<h2>My current research interests focus on the<br />
-            intersection of 3D Vision, Computer Graphics and AI.<br />
-								<!-- Computer Graphics and <br />its intersection with Computer Vision.</h2> -->
+							<h2>I'm interested in generative models that understand<br />
+            how things work, not just how they look.</h2>
 						</header>
-						<p>I'm fascinated by the wonderful 3D world.<br />
+						<p class="lead">Concretely, I study how to generate objects with structure, precise geometry, and function: how they are composed of parts, how they move, and how they are assembled.</p>
             <!-- Hoping to bring the world into cyberspace and make people able to build their infinite fantasy worlds. <br /> -->
             <!-- (Well, the concept of OASIS in Ready Player One is cool. Hoping it can come into reality in the future.) <br /> -->
-            I'm supervised by  <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Prof. Shenghua Gao</a> and <a href="https://scholar.google.com/citations?user=dK02t3MAAAAJ&hl=en">Prof. Xiaopei Liu</a> during my MPhil program.<br />
-            I used to visit UC San Diego, where I was fortunate to have the opportunity to work with <a href="https://scholar.google.com/citations?user=fuR1FBwAAAAJ&hl=en">Prof. Anpei Chen</a>. <br />
-						Feel free to contact me through email or <a href="./images/fulls/wechat.JPG">wechat </a>. But please let me know who you are.<br />
-						Email: xujw2023@@shanghaitech.edu.cn<br/>
-            <a href="https://scholar.google.com/citations?user=nDHYAS0AAAAJ&hl=en"> [Google Scholar]</a> 
-					</p>
-						<!-- <ul class="actions"> -->
-						<!-- 	<li><a href="#" class="button">Learn More</a></li> -->
-						<!-- </ul> -->
+						<div class="contact">
+							<p>Feel free to contact me through email or wechat. But please let me know who you are.</p>
+							<ul>
+								<li>Email: jingwei.xu@@monash.edu</li>
+								<li><a href="./images/fulls/wechat.JPG">WeChat</a></li>
+								<li><a href="https://scholar.google.com/citations?user=nDHYAS0AAAAJ&hl=en">Google Scholar</a></li>
+							</ul>
+						</div>
 					</section>
 
           <section id="Publications">
-            <h1>Publications</h1>
-            <h4>(* denotes co-first authors, † denotes corresponding authors)</h4>
+            <h2 class="section-title">Publications</h2>
+            <p class="note">(* denotes co-first authors, † denotes corresponding authors, ‡ also made major contributions)</p>
             <br>
 			<div class="row">
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="./images/fulls/cadmllm.mp4" class="image fit thumb"><img src="./images/thumbs/cadmllm.gif" alt="" style="height: auto;
-	max-height: 300px;  object-fit: contain;"/></a>
+					<a href="./images/fulls/buffalo.jpg" class="image fit thumb"><img src="./images/thumbs/buffalo.jpg" width="800" height="353" alt="Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing" loading="lazy" class="thumb-img" /></a>
+					<h3><a href="https://tencent-hunyuan.github.io/Hunyuan3D-Buffalo1.0/">Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing</a></h3>
+					<p>
+					  <a href="https://scholar.google.com/citations?user=TKpuiuIAAAAJ&hl=en">Junliang Ye*</a>,
+					  <a href="https://scholar.google.com/citations?user=qy40HA0AAAAJ&hl=en">Kenkun Liu*</a>,
+					  <a href="https://scholar.google.com/citations?user=RaqyNjYAAAAJ&hl=en">Guocun Wang*</a>,
+					  <a href="https://scholar.google.com/citations?user=ECzmAC8AAAAJ&hl=en">Yang Li*</a>,
+					  <a href="https://scholar.google.com/citations?user=zBLDzs4AAAAJ&hl=en">Yansong Qu*</a>,
+					  <a href="https://scholar.google.com/citations?user=LNxEN9cAAAAJ&hl=en">Chunshi Wang*</a>,
+					  <strong>Jingwei Xu</strong>,
+					  <a href="https://scholar.google.com/citations?user=1aRD_e8AAAAJ&hl=en">Yunhan Yang</a>,
+					  <a href="https://maikouuu.github.io/">Zibo Zhao</a>,
+					  <a href="https://scholar.google.com/citations?user=GcznIXIAAAAJ&hl=en">Jiachen Xu</a>,
+					  Jiaao Yu,
+					  <a href="https://scholar.google.com/citations?user=wnklTUoAAAAJ&hl=en">Lifu Wang</a>,
+					  <a href="https://scholar.google.com/citations?user=oQpAzREAAAAJ&hl=en">Zhihao Liang</a>,
+					  Xin Huang,
+					  <a href="https://scholar.google.com/citations?user=qTIpn-8AAAAJ&hl=en">Zhuo Chen</a>,
+					  <a href="https://dblp.org/search?q=author:Chunchao_Guo:">Chunchao Guo</a>
+					</p>
+					<p> <a href="https://tencent-hunyuan.github.io/Hunyuan3D-Buffalo1.0/">[Project Page]</a> <a href="https://arxiv.org/abs/2608.02711">[arXiv]</a> <a href="https://github.com/Tencent-Hunyuan/Hunyuan3D-Buffalo1.0">[Code]</a> </p>
+					<p>arXiv 2026</p>
+				  </article>
+              </div>
+			<div class="row">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="./images/fulls/pointercad_v2.jpg" class="image fit thumb"><img src="./images/thumbs/pointercad_v2.jpg" width="800" height="416" alt="Pointer-CAD v2: Plan-Then-Construct CAD Generation with Dimension-Aware Parametric Precision" loading="lazy" class="thumb-img" /></a>
+					<h3><a href="https://arxiv.org/abs/2606.29301">Pointer-CAD v2: Plan-Then-Construct CAD Generation with Dimension-Aware Parametric Precision</a></h3>
+					<p>
+					  <a href="https://scholar.google.com/citations?user=iPEZpWsAAAAJ&hl=en">Dacheng Qi</a>,
+					  <a href="https://chenyu-wang567.github.io/">Chenyu Wang</a>,
+					  <strong>Jingwei Xu</strong>,
+					  <a href="https://scholar.google.com/citations?user=XqLiBQMAAAAJ&hl=en">Yi Ma</a>,
+					  <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Shenghua Gao<sup>†</sup></a>
+					</p>
+					<p> <a href="https://arxiv.org/abs/2606.29301">[arXiv]</a> <a href="https://github.com/Snitro/Pointer-CAD-v2">[Code]</a> <a href="https://arxiv.org/src/2606.29301v1/anc/visualization.html">[Demo]</a> </p>
+					<p>ECCV 2026</p>
+				  </article>
+              </div>
+			<div class="row">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="./images/fulls/pointercad.jpg" class="image fit thumb"><img src="./images/thumbs/pointercad.jpg" width="800" height="292" alt="Pointer-CAD: Unifying B-Rep and Command Sequences via Pointer-based Edges &amp; Faces Selection" loading="lazy" class="thumb-img" /></a>
+					<h3><a href="https://snitro.github.io/Pointer-CAD-Page/">Pointer-CAD: Unifying B-Rep and Command Sequences via Pointer-based Edges &amp; Faces Selection</a></h3>
+					<p>
+					  <a href="https://scholar.google.com/citations?user=iPEZpWsAAAAJ&hl=en">Dacheng Qi*</a>,
+					  <a href="https://chenyu-wang567.github.io/">Chenyu Wang*</a>,
+					  <strong>Jingwei Xu<sup>‡</sup></strong>,
+					  <a href="https://scholar.google.com/citations?user=v6HphBcAAAAJ&hl=en">Tianzhe Chu</a>,
+					  <a href="https://maikouuu.github.io/">Zibo Zhao</a>,
+					  <a href="https://scholar.google.com/citations?user=A6K6bkoAAAAJ&hl=en">Wen Liu</a>,
+					  <a href="https://scholar.google.com/citations?user=O6-fWmQAAAAJ&hl=en">Wenrui Ding</a>,
+					  <a href="https://scholar.google.com/citations?user=XqLiBQMAAAAJ&hl=en">Yi Ma</a>,
+					  <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Shenghua Gao<sup>†</sup></a>
+					</p>
+					<p> <a href="https://snitro.github.io/Pointer-CAD-Page/">[Project Page]</a> <a href="https://arxiv.org/abs/2603.04337">[arXiv]</a> <a href="https://github.com/Snitro/Pointer-CAD">[Code]</a> </p>
+					<p>CVPR 2026</p>
+				  </article>
+              </div>
+			<div class="row">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="./images/fulls/cadmllm.mp4" class="image fit thumb"><video class="thumb-img thumb-video" src="./images/thumbs/cadmllm.mp4" poster="./images/thumbs/cadmllm_poster.jpg" width="640" height="360" muted loop playsinline preload="none" aria-label="CAD-MLLM: Unifying Multimodality-Conditioned CAD Generation With MLLM"></video></a>
 					<h3><a href="https://cad-mllm.github.io/">CAD-MLLM: Unifying Multimodality-Conditioned CAD Generation With MLLM</a></h3>
 					<p>
 					  <strong>Jingwei Xu*</strong>,
-					  <a href="https://github.com/jeremiah-wang">Chenyu Wang*</a>,
+					  <a href="https://chenyu-wang567.github.io/">Chenyu Wang*</a>,
 					  <a href="https://maikouuu.github.io/">Zibo Zhao</a>,
 					  <a href="https://scholar.google.com/citations?user=A6K6bkoAAAAJ&hl=en">Wen Liu</a>,
 					  <a href="https://scholar.google.com/citations?user=XqLiBQMAAAAJ&hl=en">Yi Ma</a>,
 					  <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Shenghua Gao<sup>†</sup></a>
 					</p>
 					<p> <a href="https://cad-mllm.github.io/">[Project Page]</a> <a href="https://arxiv.org/abs/2411.04954">[arXiv]</a> </p>
-					<p>arXiv 2024 (Journel submission under review since 03-Nov-2024)</p>
+					<p>arXiv 2024 (Journal submission under review since 03-Nov-2024)</p>
 				  </article>
               </div>
 			<div class="row">
                 <article class="col-6 col-12-xsmall work-item">
-                  <a href="./images/fulls/StreetUnveiler.mp4" class="image fit thumb"><img src="./images/thumbs/StreetUnveiler.gif" alt="" style="height: auto;
-  max-height: 300px;  object-fit: contain;"/></a>
+                  <a href="./images/fulls/StreetUnveiler.mp4" class="image fit thumb"><video class="thumb-img thumb-video" src="./images/thumbs/StreetUnveiler.mp4" poster="./images/thumbs/StreetUnveiler_poster.jpg" width="640" height="214" muted loop playsinline preload="none" aria-label="3D StreetUnveiler with Semantic-Aware 2DGS - a simple baseline"></video></a>
                   <h3><a href="https://streetunveiler.github.io/">3D StreetUnveiler with Semantic-Aware 2DGS - a simple baseline</a></h3>
                   <p>
                     <strong>Jingwei Xu</strong>,
@@ -121,14 +300,12 @@ ul.topnav li.right {float: right;}
                     <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Shenghua Gao<sup>†</sup></a>
                   </p>
                   <p> <a href="https://streetunveiler.github.io/">[Project Page]</a> <a href="https://arxiv.org/abs/2405.18416">[arXiv]</a> <a href="https://github.com/DavidXu-JJ/StreetUnveiler">[Code]</a> </p>
-                  <p> (TLDR: We remove the stopping cars from the street.) </p>
                   <p>ICLR 2025</p>
                 </article>
               </div>
 			<div class="row">
                 <article class="col-6 col-12-xsmall work-item">
-                  <a href="./pubs/DebSDF/static/images/teaser.png" class="image fit thumb"><img src="./pubs/DebSDF/static/images/teaser.png" alt="" style="height: auto;
-  max-height: 300px;  object-fit: contain;"/></a>
+                  <a href="./pubs/DebSDF/static/images/teaser.png" class="image fit thumb"><img src="./images/thumbs/debsdf.jpg" width="800" height="330" alt="DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction" loading="lazy" class="thumb-img" /></a>
                   <h3><a href="./pubs/DebSDF/index.html">DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction</a></h3>
                   <p>
                     <a href="https://scholar.google.com/citations?user=AioOVwEAAAAJ&hl=en">Yuting Xiao*</a>,
@@ -137,7 +314,6 @@ ul.topnav li.right {float: right;}
                     <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ&hl=en">Shenghua Gao<sup>†</sup></a>
                   </p>
                   <p> <a href="./pubs/DebSDF/index.html">[Project Page]</a> <a href="https://arxiv.org/abs/2308.15536">[arXiv]</a> <a href="https://github.com/DavidXu-JJ/DebSDF">[Code]</a> </p>
-                  <p> (TLDR: We reconstruct the detailed indoor scenes.) </p>
                   <p>TPAMI 2024 (IF: 20.8)</p>
                 </article>
               </div>
@@ -146,491 +322,110 @@ ul.topnav li.right {float: right;}
 
 				<!-- Two -->
 					<section id="Works">
-						<h1>Works</h1>
-			  <h2>10/2025</h2>		
+						<h2 class="section-title">Works</h2>
+			  <h3 class="work-date">10/2025</h3>		
 			  <div class="row">
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/power_voronoi.mp4" class="image fit thumb"><img src="images/thumbs/power_voronoi.gif" alt="" style="height: auto;
-max-height: 300px;  object-fit: contain;"/></a>
-					<h3>Power Voronoi Diagram</h3>
+					<a href="images/fulls/power_voronoi.mp4" class="image fit thumb"><video class="thumb-img thumb-video" src="images/thumbs/power_voronoi.mp4" poster="images/thumbs/power_voronoi_poster.jpg" width="640" height="358" muted loop playsinline preload="none" aria-label="Power Voronoi Diagram"></video></a>
+					<h4>Power Voronoi Diagram</h4>
         <p><a href="https://en.wikipedia.org/wiki/Power_diagram">[Reference 1]</a><a href="https://ww2.mathworks.cn/matlabcentral/fileexchange/44385-power-diagrams">[Reference 2]</a> </p>
 				</article>
 			  </div>
-			  <h2>06/2024</h2>		
+			  <h3 class="work-date">06/2024</h3>		
 			  <div class="row">
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/FEM.mp4" class="image fit thumb"><img src="images/thumbs/FEM.png" alt="" style="height: auto;
-max-height: 300px;  object-fit: contain;"/></a>
-					<h3>Finite Element Methods for Soft Body Simulation</h3>
+					<a href="images/fulls/FEM.mp4" class="image fit thumb"><video class="thumb-img thumb-video" src="images/thumbs/FEM.mp4" poster="images/thumbs/FEM_poster.jpg" width="640" height="360" muted loop playsinline preload="none" aria-label="Finite Element Methods for Soft Body Simulation"></video></a>
+					<h4>Finite Element Methods for Soft Body Simulation</h4>
         <p><a href="./blog/FEM_note.pdf">[My Note]</a>[Code Taichi(unrelease)]</p>
 				</article>
 			  </div>
-              <h2>05/2024</h2>
+              <h3 class="work-date">05/2024</h3>
 			  <div class="row">
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/gltf_vis.mp4" class="image fit thumb"><img src="images/thumbs/gltf_vis.gif" alt="" style="height: auto;
-max-height: 300px;  object-fit: contain;"/></a>
-					<h3>glTF Visualizer</h3>
+					<a href="images/fulls/gltf_vis.mp4" class="image fit thumb"><video class="thumb-img thumb-video" src="images/thumbs/gltf_vis.mp4" poster="images/thumbs/gltf_vis_poster.jpg" width="640" height="256" muted loop playsinline preload="none" aria-label="glTF Visualizer"></video></a>
+					<h4>glTF Visualizer</h4>
 	<p><a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html">[Reference Specification]</a>[Code C++(unrelease)] </p>
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/stable_fluid.mp4" class="image fit thumb"><img src="images/thumbs/stable_fluid.gif" alt="" style="height: auto;
-max-height: 300px;  object-fit: contain;"/></a>
-					<h3>Stable Fluids</h3>
+					<a href="images/fulls/stable_fluid.mp4" class="image fit thumb"><video class="thumb-img thumb-video" src="images/thumbs/stable_fluid.mp4" poster="images/thumbs/stable_fluid_poster.jpg" width="640" height="256" muted loop playsinline preload="none" aria-label="Stable Fluids"></video></a>
+					<h4>Stable Fluids</h4>
 					<p><a href="https://dl.acm.org/doi/10.1145/311535.311548">[Reference Paper]</a>[Code C++(unrelease)] </p>
 				</article>
 			  </div>
-              <h2>01/2024</h2>
+              <h3 class="work-date">01/2024</h3>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/image_quilting.png" class="image fit thumb"><img src="images/fulls/image_quilting.png" alt="" style="height: auto;
- max-height: 300px;  object-fit: contain;"/></a>
-								<h3><a href="https://github.com/DavidXu-JJ/Image_Quilting_CPP">Image Quilting Reimplementation</a></h3>
+								<a href="images/fulls/image_quilting.png" class="image fit thumb"><img src="images/thumbs/image_quilting.jpg" width="800" height="466" alt="Image Quilting Reimplementation" loading="lazy" class="thumb-img" /></a>
+								<h4><a href="https://github.com/DavidXu-JJ/Image_Quilting_CPP">Image Quilting Reimplementation</a></h4>
                 <p> <a href="https://github.com/DavidXu-JJ/Image_Quilting_CPP">[Project Page/Code C++]</a> <a href="https://dl.acm.org/doi/10.1145/383259.383296">[Reference Paper]</a> </p>
 							</article>
             </div>
-              <h2>11/2022</h2>
+              <h3 class="work-date">11/2022</h3>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/PathTracer.png" class="image fit thumb"><img src="images/fulls/PathTracer.png" alt="" style="height: auto;
- max-height: 300px;  object-fit: contain;"/></a>
-								<h3><a href="https://github.com/DavidXu-JJ/PathTracerPractice">Path Tracer</a></h3>
+								<a href="images/fulls/PathTracer.png" class="image fit thumb"><img src="images/thumbs/PathTracer.jpg" width="607" height="600" alt="Path Tracer" loading="lazy" class="thumb-img" /></a>
+								<h4><a href="https://github.com/DavidXu-JJ/PathTracerPractice">Path Tracer</a></h4>
 								<p> My Note: <a href="./blog/PathTracer/index.html">[HTML]</a> <a href="https://github.com/DavidXu-JJ/PathTracerPractice">[PDF and Code C++(unrelease)]</a> </p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/NeRF.png" class="image fit thumb"><img src="images/fulls/NeRF.png" alt="" style="height: auto;
- max-height: 300px;  object-fit: contain;"/></a>
-								<h3><a href="https://github.com/DavidXu-JJ/NeRF_pytorch_reproduction">NeRF Reimplementation</a></h3>
+								<a href="images/fulls/NeRF.png" class="image fit thumb"><img src="images/thumbs/NeRF.jpg" width="504" height="378" alt="NeRF Reimplementation" loading="lazy" class="thumb-img" /></a>
+								<h4><a href="https://github.com/DavidXu-JJ/NeRF_pytorch_reproduction">NeRF Reimplementation</a></h4>
 								<p> <a href="https://arxiv.org/pdf/2003.08934.pdf">[Reference Paper]</a> [Code Python(unrelease)]</p> 
 								<p> My Note: <a href="./blog/NeRF/index.html">[HTML]</a> </p>
-                <p> (If you are interested in the Physical Model behind volume rendering, maybe you can take a try on <a href="./blog/NeRF/index.html#4-volume-rendering-introduction">this part</a>.) </p>
+                <p> (If you are interested in the physical model behind volume rendering, you may want to check out <a href="./blog/NeRF/index.html#4-volume-rendering-introduction">this part</a>.) </p>
 							</article>
             </div>
-              <h2>08/2022</h2>
+              <h3 class="work-date">08/2022</h3>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/GPU_PoissonRecon.png" class="image fit thumb"><img src="images/fulls/GPU_PoissonRecon.png" alt="" style="height: auto;
- max-height: 300px;  object-fit: contain;"/></a>
-								<h3><a href="https://github.com/DavidXu-JJ/PoissonRecon_GPU">GPU Poisson Reconstruction Reimplementation</a></h3>
+								<a href="images/fulls/GPU_PoissonRecon.png" class="image fit thumb"><img src="images/thumbs/GPU_PoissonRecon.jpg" width="226" height="600" alt="GPU Poisson Reconstruction Reimplementation" loading="lazy" class="thumb-img" /></a>
+								<h4><a href="https://github.com/DavidXu-JJ/PoissonRecon_GPU">GPU Poisson Reconstruction Reimplementation</a></h4>
                 <p> <a href="https://github.com/DavidXu-JJ/PoissonRecon_GPU">[Project Page/Code CUDA]</a> <a href="http://kunzhou.net/2010/ParallelOctree-preprint.pdf">[Reference Paper]</a> </p>
 								<!-- <p>Ref to <a href="http://kunzhou.net/2010/ParallelOctree-preprint.pdf">Data-Parallel Octrees for Surface Reconstruction</a></p> -->
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/CPU_PoissonRecon.png" class="image fit thumb"><img src="images/fulls/CPU_PoissonRecon.png" alt="" style="height: auto;
- max-height: 300px;  object-fit: contain;"/></a>
-								<h3><a href="https://github.com/DavidXu-JJ/PoissonRecon_CPU">CPU Poisson Reconstruction Reimplementation</a></h3>
+								<a href="images/fulls/CPU_PoissonRecon.png" class="image fit thumb"><img src="images/thumbs/CPU_PoissonRecon.jpg" width="636" height="600" alt="CPU Poisson Reconstruction Reimplementation" loading="lazy" class="thumb-img" /></a>
+								<h4><a href="https://github.com/DavidXu-JJ/PoissonRecon_CPU">CPU Poisson Reconstruction Reimplementation</a></h4>
                 <p> <a href="https://github.com/DavidXu-JJ/PoissonRecon_CPU">[Project Page/Code C++]</a> <a href="https://hhoppe.com/poissonrecon.pdf">[Reference Paper]</a> </p>
 								<!-- <p>Ref to <a href="https://hhoppe.com/poissonrecon.pdf">Poisson Surface Reconstruction</a>.</p> -->
 							</article>
             </div>
-              <h2>03/2022</h2>
+              <h3 class="work-date">03/2022</h3>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/v3d_automation.png" class="image fit thumb"><img src="images/fulls/v3d_automation.png" alt=""  style="height: auto;
- max-height: 300px;  object-fit: contain;"/></a>
-								<h3><a href="https://github.com/DavidXu-JJ/v3d_automation">v3d automation</a></h3>
+								<a href="images/fulls/v3d_automation.png" class="image fit thumb"><img src="images/thumbs/v3d_automation.jpg" width="800" height="552" alt="v3d automation" loading="lazy" class="thumb-img" /></a>
+								<h4><a href="https://github.com/DavidXu-JJ/v3d_automation">v3d automation</a></h4>
 								<p>Fork from <a href="https://github.com/Vaa3D/v3d_external">v3d_external</a></p>
                 <p> <a href="https://github.com/DavidXu-JJ/v3d_automation">[Project Page/Code C++]</a> </p>
 							</article>
-							<!-- <article class="col-6 col-12-xsmall work-item"> -->
-							<!-- 	<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a> -->
-							<!-- 	<h3>Quam neque phasellus</h3> -->
-							<!-- 	<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p> -->
-							<!-- </article> -->
-							<!-- <article class="col-6 col-12-xsmall work-item"> -->
-							<!-- 	<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a> -->
-							<!-- 	<h3>Nunc enim commodo aliquet</h3> -->
-							<!-- 	<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p> -->
-							<!-- </article> -->
-							<!-- <article class="col-6 col-12-xsmall work-item"> -->
-							<!-- 	<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a> -->
-							<!-- 	<h3>Risus ornare lacinia</h3> -->
-							<!-- 	<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p> -->
-							<!-- </article> -->
 						</div>
-						<!-- <ul class="actions"> -->
-						<!-- 	<li><a href="#" class="button">Full Portfolio</a></li> -->
-						<!-- </ul> -->
 					</section>
 
 					<section id="Services">
-						<h1>Teaching</h1>
-            <p>Teaching assistant:</p>
+						<h2 class="section-title">Teaching</h2>
             <ul>
-              <li>ShanghaiTech-CS172, 2023Fall</li>
-            </ul> 
-						<h1>Academic Services</h1>
+              <li>Teaching Assistant: ShanghaiTech CS172 (2023 Fall)</li>
+            </ul>
+						<h2 class="section-title">Academic Services</h2>
             <ul>
-              <li>Conference Review: ICLR 2025</li>
-              <li>Journel Review: TMM</li>
+              <li>Conference Reviewer: ICLR 2025, ICLR 2026, CVPR 2026</li>
+              <li>Journal Reviewer: TMM, TPAMI</li>
             </ul>
               
           </section>
 				<!-- Three -->
 					<section id="Misc">
-						<h1>Misc</h1>
+						<h2 class="section-title">Misc</h2>
             <ul> 
-              <li>My name is pronounced like "Jin--Way--Hsu". Or maybe you can just call me David.</li>
-              <li> My hobby contains drawing, photography, comic and animation. </li>
+              <li> My hobbies include drawing, photography, comics and animation. </li>
               <li> The Witcher 3: Wild Hunt is my favourite game. </li>
               <li> Steins;Gate is my favourite anime. </li>
             </ul>
-						<img src="images/misc/witcher3.jpeg" style="height: auto; max-height: 300px;  object-fit: contain;"></image>
-						<img src="images/misc/steins_gate.jpg" style="height: auto; max-height: 300px;  object-fit: contain;"></image>
-						<img src="images/misc/steins_gate0.jpg" style="height: auto; max-height: 300px;  object-fit: contain;"></image>
-						<!-- <h2>Get In Touch</h2> -->
-						<!-- <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p> -->
-						<!-- <div class="row"> -->
-						<!-- 	<div class="col-8 col-12-small"> -->
-						<!-- 		<form method="post" action="#"> -->
-						<!-- 			<div class="row gtr-uniform gtr-50"> -->
-						<!-- 				<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div> -->
-						<!-- 				<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div> -->
-						<!-- 				<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div> -->
-						<!-- 			</div> -->
-						<!-- 		</form> -->
-						<!-- 		<ul class="actions"> -->
-						<!-- 			<li><input type="submit" value="Send Message" /></li> -->
-						<!-- 		</ul> -->
-						<!-- 	</div> -->
-						<!-- 	<div class="col-4 col-12-small"> -->
-						<!-- 		<ul class="labeled-icons"> -->
-						<!-- 			<li> -->
-						<!-- 				<h3 class="icon solid fa-home"><span class="label">Address</span></h3> -->
-						<!-- 				1234 Somewhere Rd.<br /> -->
-						<!-- 				Nashville, TN 00000<br /> -->
-						<!-- 				United States -->
-						<!-- 			</li> -->
-						<!-- 			<li> -->
-						<!-- 				<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3> -->
-						<!-- 				000-000-0000 -->
-						<!-- 			</li> -->
-						<!-- 			<li> -->
-						<!-- 				<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3> -->
-						<!-- 				<a href="#">hello@untitled.tld</a> -->
-						<!-- 			</li> -->
-						<!-- 		</ul> -->
-						<!-- 	</div> -->
-						<!-- </div> -->
+						<img src="images/misc/witcher3.jpeg" alt="The Witcher 3: Wild Hunt" loading="lazy" class="misc-img" />
+						<img src="images/misc/steins_gate.jpg" alt="Steins;Gate" loading="lazy" class="misc-img" />
+						<img src="images/misc/steins_gate0.jpg" alt="Steins;Gate 0" loading="lazy" class="misc-img" />
 					</section>
 
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
-
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				-->
 
 			</div>
 
@@ -639,14 +434,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<div class="inner">
 					<ul class="icons">
 						<li><a href="https://twitter.com/DavidJingweiXU" class="icon brands fa-twitter"><span class="label">Twitter/X</span></a></li>
-						<li><a href="https://orcid.org/0009-0009-2637-6632" class="icon brands fa-orcid"><span class="label">Twitter/X</span></a></li>
+						<li><a href="https://orcid.org/0009-0009-2637-6632" class="icon brands fa-orcid"><span class="label">ORCID</span></a></li>
 						<li><a href="https://github.com/DavidXu-JJ" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="https://www.linkedin.com/in/jingwei-david-xu-86b622242/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-						<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
-						<li><a href="mailto:xujw2023@shanghaitech.edu.cn" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="mailto:jingwei.xu@monash.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Jingwei Xu</li><li>Last Updated: Nov 2025</li>
+						<li>&copy; Jingwei Xu</li><li>Last Updated: Oct 2026</li>
 					</ul>
 				</div>
 			</footer>
@@ -658,6 +452,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Play thumbnail videos only while they are on screen.
+				(function() {
+					var videos = document.querySelectorAll('video.thumb-video');
+					if (!('IntersectionObserver' in window)) {
+						videos.forEach(function(v) { v.play().catch(function() {}); });
+						return;
+					}
+					var observer = new IntersectionObserver(function(entries) {
+						entries.forEach(function(entry) {
+							if (entry.isIntersecting)
+								entry.target.play().catch(function() {});
+							else
+								entry.target.pause();
+						});
+					}, { rootMargin: '200px' });
+					videos.forEach(function(v) { observer.observe(v); });
+				})();
+			</script>
 
 	</body>
 </html>
