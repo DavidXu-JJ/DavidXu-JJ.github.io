@@ -19,147 +19,7 @@
 		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap" />
-		<style>
-		body {margin: 0;}
-
-		ul.topnav {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #1c2733;
-		}
-
-		ul.topnav li {float: left;}
-
-		ul.topnav li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		  border-bottom: 0;
-		}
-
-		ul.topnav li a:hover:not(.active) {background-color: #10161c;}
-
-		ul.topnav li a.active {background-color: #49bf9d;}
-
-		ul.topnav li.right {float: right;}
-
-		@media screen and (max-width: 600px) {
-		  ul.topnav li.right, 
-		  ul.topnav li {float: none;}
-		}
-
-		.thumb-img, .misc-img {
-		  height: auto;
-		  max-height: 300px;
-		  object-fit: contain;
-		}
-
-		h2.section-title {font-size: 2em;}
-
-		h3.work-date {font-size: 1.5em;}
-
-		.work-item h4 {
-		  font-size: 1em;
-		  margin: 0 0 0.5em 0;
-		}
-
-		p.note {
-		  color: #787878;
-		  font-size: 1.1em;
-		  line-height: 1.5em;
-		  margin: 0 0 1em 0;
-		}
-
-		#header .image.avatar {
-		  width: 9em;
-		  padding: 0.35em;
-		  border: 2px solid rgba(73, 191, 157, 0.85);
-		  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0.75em 2em rgba(0, 0, 0, 0.45);
-		  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		#header .image.avatar:hover {
-		  border-color: #49bf9d;
-		  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 1.5em rgba(73, 191, 157, 0.45);
-		}
-
-		#header .image.avatar img {
-		  aspect-ratio: 1;
-		  object-fit: cover;
-		}
-		#header {
-		  background-color: #10161c;
-		  background-image:
-		    radial-gradient(circle at 78% 20%, rgba(73, 191, 157, 0.22), transparent 55%),
-		    linear-gradient(165deg, #1c2733 0%, #121920 55%, #0b0f14 100%);
-		  background-position: center;
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		}
-
-		@media screen and (max-width: 980px) {
-		  #header {
-		    background-image:
-		      radial-gradient(circle at 50% 35%, rgba(73, 191, 157, 0.22), transparent 60%),
-		      linear-gradient(180deg, #1c2733 0%, #10161c 100%);
-		  }
-
-		  #footer {
-		    background-color: #10161c;
-		    background-image: linear-gradient(180deg, #10161c 0%, #0b0f14 100%);
-		  }
-		}
-		.work-item p strong {
-		  color: #555555;
-		  font-weight: 600;
-		}
-		#bio header.major {margin-bottom: 1.5em;}
-
-		#bio header.major h2 {font-size: 1.6em;}
-
-		#bio p.lead {
-		  border-left: 3px solid #49bf9d;
-		  color: #787878;
-		  font-size: 1.1em;
-		  margin: 0 0 1.75em 0;
-		  padding-left: 1em;
-		}
-
-		#bio p.bio-text {margin: 0 0 2.5em 0;}
-
-		#bio .contact {
-		  border-top: solid 1px #efefef;
-		  font-size: 0.9em;
-		  padding-top: 1.25em;
-		}
-
-		#bio .contact p {margin: 0 0 0.25em 0;}
-
-		#bio .contact ul {
-		  list-style: none;
-		  margin: 0;
-		  padding: 0;
-		}
-
-		#bio .contact li {
-		  display: inline-block;
-		  padding: 0 0.4em 0 0;
-		}
-
-		#bio .contact li:not(:last-child):after {
-		  content: "\00b7";
-		  margin: 0 0.2em 0 0.6em;
-		}
-		.image.fit video {
-		  border-radius: 0.35em;
-		  display: block;
-		  width: 100%;
-		}
-		</style>
+		<link rel="stylesheet" href="assets/css/custom.css" />
 	</head>
 	<body class="is-preload">
 <ul class="topnav">
@@ -168,7 +28,7 @@
   <!-- <li class="right"><a href="#about">About</a></li> -->
   <!-- <li class="right"><a href="#contact">Contact</a></li> -->
   <!-- <li class="right"><a href="#news">News</a></li> -->
-  <li class="right"><a class="active" href="./">Home</a></li>
+  <li class="right"><a class="active" href="./index.html">Home</a></li>
 </ul>
 
 		<!-- Header -->
@@ -211,7 +71,6 @@
           <section id="Publications">
             <h2 class="section-title">Publications</h2>
             <p class="note">(* denotes co-first authors, † denotes corresponding authors, ‡ also made major contributions)</p>
-            <br>
 			<div class="row">
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="./images/fulls/buffalo.jpg" class="image fit thumb"><img src="./images/thumbs/buffalo.jpg" width="800" height="353" alt="Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing" loading="lazy" class="thumb-img" /></a>
@@ -403,27 +262,22 @@
 
 					<section id="Services">
 						<h2 class="section-title">Teaching</h2>
-            <ul>
-              <li>Teaching Assistant: ShanghaiTech CS172 (2023 Fall)</li>
-            </ul>
+						<dl class="facts">
+							<div><dt>Teaching Assistant</dt><dd>ShanghaiTech CS172 (2023 Fall)</dd></div>
+						</dl>
 						<h2 class="section-title">Academic Services</h2>
-            <ul>
-              <li>Conference Reviewer: ICLR 2025, ICLR 2026, CVPR 2026</li>
-              <li>Journal Reviewer: TMM, TPAMI</li>
-            </ul>
-              
-          </section>
+						<dl class="facts">
+							<div><dt>Conference Reviewer</dt><dd><span class="tag">ICLR 2025</span><span class="tag">ICLR 2026</span><span class="tag">CVPR 2026</span></dd></div>
+							<div><dt>Journal Reviewer</dt><dd><span class="tag">TMM</span><span class="tag">TPAMI</span></dd></div>
+						</dl>
+					</section>
 				<!-- Three -->
 					<section id="Misc">
 						<h2 class="section-title">Misc</h2>
-            <ul> 
-              <li> My hobbies include drawing, photography, comics and animation. </li>
-              <li> The Witcher 3: Wild Hunt is my favourite game. </li>
-              <li> Steins;Gate is my favourite anime. </li>
-            </ul>
-						<img src="images/misc/witcher3.jpeg" alt="The Witcher 3: Wild Hunt" loading="lazy" class="misc-img" />
-						<img src="images/misc/steins_gate.jpg" alt="Steins;Gate" loading="lazy" class="misc-img" />
-						<img src="images/misc/steins_gate0.jpg" alt="Steins;Gate 0" loading="lazy" class="misc-img" />
+						<ul class="dot-list">
+							<li>My hobbies include drawing, photography, comics and animation.</li>
+							<li>I enjoy traveling to different countries and experiencing different cultures.</li>
+						</ul>
 					</section>
 
 
