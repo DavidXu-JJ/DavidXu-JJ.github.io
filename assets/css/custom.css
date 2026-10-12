@@ -93,7 +93,11 @@ dl.facts dt {
   min-width: 11em;
 }
 
-dl.facts dd {margin: 0;}
+dl.facts dd {
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+}
 
 .tag {
   background: #eaf6f2;
@@ -234,6 +238,8 @@ p.note {
   #main > section {margin-top: 3em;}
 
   dl.facts dt {min-width: 100%;}
+
+  dl.facts dd {flex: 0 0 100%;}
 }
 
 /* Artworks gallery */
