@@ -204,11 +204,17 @@ p.note {
 #bio .contact {
   background: #f6f8f9;
   border-radius: 0.6em;
-  font-size: 0.9em;
+  font-size: 1em;
   padding: 1em 1.25em;
 }
 
 #bio .contact p {margin: 0 0 0.5em 0;}
+
+#bio .contact p.email {margin: 0 0 0.75em 0;}
+
+#bio .contact > :last-child {margin-bottom: 0;}
+
+#bio .contact .eg {color: #b0b0b0;}
 
 #bio .contact ul {
   list-style: none;
@@ -219,7 +225,7 @@ p.note {
 #bio .contact li {
   background: #ffffff;
   border: solid 1px #e3e8eb;
-  border-radius: 999px;
+  border-radius: 1em;
   display: inline-block;
   line-height: 2em;
   margin: 0 0.4em 0.3em 0;
